@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6EB8593E2C74006B9CCB6C57 /* libPods-EaseCallUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFBC940F0239CC9CFD9291E /* libPods-EaseCallUI.a */; };
+		C09A9772258B5A4600BEC281 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09A9771258B5A4600BEC281 /* AudioToolbox.framework */; };
 		C0D9ED2C2581DBE300842DC9 /* EaseCallManager+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D9ED1C2581DBE300842DC9 /* EaseCallManager+Private.h */; };
 		C0D9ED2D2581DBE300842DC9 /* EaseCallSingleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D9ED1D2581DBE300842DC9 /* EaseCallSingleViewController.h */; };
 		C0D9ED2E2581DBE300842DC9 /* EaseCallBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D9ED1E2581DBE300842DC9 /* EaseCallBaseViewController.h */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		9D53284CA0F0EBA443C10A1F /* Pods-EaseCallUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseCallUI.release.xcconfig"; path = "Target Support Files/Pods-EaseCallUI/Pods-EaseCallUI.release.xcconfig"; sourceTree = "<group>"; };
 		ACFBC940F0239CC9CFD9291E /* libPods-EaseCallUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EaseCallUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C09A9771258B5A4600BEC281 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C0D9ED0F2581DAE400842DC9 /* EaseCallUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EaseCallUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D9ED132581DAE400842DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0D9ED1C2581DBE300842DC9 /* EaseCallManager+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EaseCallManager+Private.h"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				C0D9ED3F2581DC7100842DC9 /* CoreMotion.framework in Frameworks */,
 				C0D9ED422581DD0A00842DC9 /* Hyphenate.framework in Frameworks */,
 				6EB8593E2C74006B9CCB6C57 /* libPods-EaseCallUI.a in Frameworks */,
+				C09A9772258B5A4600BEC281 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +134,7 @@
 		C0D9ED3D2581DC7100842DC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C09A9771258B5A4600BEC281 /* AudioToolbox.framework */,
 				C0D9ED412581DD0A00842DC9 /* Hyphenate.framework */,
 				C0D9ED3E2581DC7100842DC9 /* CoreMotion.framework */,
 				ACFBC940F0239CC9CFD9291E /* libPods-EaseCallUI.a */,

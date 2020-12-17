@@ -15,4 +15,5 @@
 - (void)enableVideoAction:(BOOL)aEnable;
 - (void)muteAction:(BOOL)aMute;
 - (void)switchCameraAction;
+- (NSString*)getNickNameFromUID:(NSString*)uId;
 @end /* EaseCallManager_Private_h */

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EaseCallPlaceholderView : UIView
 @property (nonatomic, strong) UIImageView *placeHolder;
 @property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic) UIActivityIndicatorView * activity;
 @end
 
 NS_ASSUME_NONNULL_END

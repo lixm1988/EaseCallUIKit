@@ -11,17 +11,18 @@
 #import <Hyphenate/Hyphenate.h>
 
 typedef NS_ENUM(NSInteger,EaseCallType) {
-    EaseCallType1v1,
+    EaseCallType1v1Audio,
+    EaseCallType1v1Video,
     EaseCallTypeMulti
 };
 
 
 @protocol EaseCallDelegate <NSObject>
 // 结束时通话时长
-- (void)singleCallDidEnd:(EMCallEndReason)reason;
-- (void)multiCallDidEnd:(EMCallEndReason)reason;
-- (void)multiCallDidInvitingCurVC:(UIViewController*)vc;
+- (void)callDidEnd:(EMCallEndReason)reason time:(int)tm type:(EaseCallType)type;
+- (void)multiCallDidInvitingWithCurVC:(UIViewController*_Nonnull)vc excludeUsers:(NSArray<NSString*> *_Nullable)users;
 // 振铃时增加回调
+- (void)callDidReceive:(EaseCallType)aType inviter:(NSString*_Nonnull)user;
 @end
 
 NS_ASSUME_NONNULL_BEGIN
@@ -30,8 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedManager;
 - (void)initWithConfig:(EaseCallConfig*)aConfig delegate:(id<EaseCallDelegate>)aDelegate;
 // 每次通话时的配置（标题、振铃文件、是否振动）,通话类型（语音、视频）
-- (void)start1v1CallWithUid:(NSString*)uId completion:(void (^)(EMError*))aCompletionBlock;
-- (void)inviteUsers:(NSArray<NSString*>*)aUsers  completion:(void (^)(EMError*))aCompletionBlock;
+- (void)startSingleCallWithUId:(NSString*)uId type:(EMCallType)aType completion:(void (^)(EMError*))aCompletionBlock;
+- (void)startInviteUsers:(NSArray<NSString*>*)aUsers  completion:(void (^)(EMError*))aCompletionBlock;
+- (EaseCallConfig*)getEaseCallConfig;
 @end
 
 NS_ASSUME_NONNULL_END

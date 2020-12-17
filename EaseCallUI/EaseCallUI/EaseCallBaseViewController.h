@@ -20,9 +20,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) UIButton* answerButton;
 @property (nonatomic,strong) UILabel* timeLabel;
 @property (strong, nonatomic) NSTimer *timeTimer;
+@property (nonatomic, assign) int timeLength;
+@property (nonatomic,strong) UILabel* microphoneLabel;
+@property (nonatomic,strong) UILabel* enableCameraLabel;
+@property (nonatomic,strong) UILabel* switchCameraLabel;
+@property (nonatomic,strong) UILabel* speakerLabel;
+@property (nonatomic,strong) UILabel* hangupLabel;
+@property (nonatomic,strong) UILabel* acceptLabel;
 
 - (void)hangupAction;
 - (void)muteAction;
+- (void)enableVideoAction;
 - (void)startTimer;
 @end
 

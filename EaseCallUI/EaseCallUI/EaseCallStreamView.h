@@ -31,6 +31,8 @@ typedef enum {
 
 @property (nonatomic) BOOL enableVideo;
 
+@property (nonatomic, strong) UIImageView *bgView;
+
 @property (nonatomic) BOOL isLockedBgView;
 
 @property (nonatomic, strong) id ext;

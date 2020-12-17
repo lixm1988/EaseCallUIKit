@@ -30,11 +30,20 @@
         }];
         
         self.placeHolder = [[UIImageView alloc] init];
+        UIImage *image = [UIImage imageNamed:@"bg_connecting"];
+        self.placeHolder.image = image;
         [self addSubview:self.placeHolder];
         [self.placeHolder mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.height.equalTo(@80);
             make.center.equalTo(self);
         }];
+        
+        _activity = [[UIActivityIndicatorView alloc] init];
+        [self addSubview:_activity];
+        [_activity mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
+        _activity.hidesWhenStopped = YES;
     }
     return self;
 }

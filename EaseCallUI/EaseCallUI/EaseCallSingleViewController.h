@@ -8,6 +8,7 @@
 
 #import "EaseCallBaseViewController.h"
 #import "EaseCallStreamView.h"
+#import "EaseCallManager+Private.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,12 +17,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) EaseCallStreamView* localView;
 @property (nonatomic) BOOL isCaller;
 @property (nonatomic,strong) UILabel* remoteNameLable;
+@property (nonatomic,strong) UIImageView* remoteHeadView;
+@property (nonatomic,strong) UIButton* switchToVoice;
+@property (nonatomic,strong) UILabel* switchToVoiceLable;
 
-- (instancetype)initWithisCaller:(BOOL)aIsCaller  remoteName:(NSString*)aRemoteName;
+- (instancetype)initWithisCaller:(BOOL)aIsCaller type:(EaseCallType)aType  remoteName:(NSString*)aRemoteName;
 - (void)setRemoteMute:(BOOL)aMuted;
 - (void)setRemoteEnableVideo:(BOOL)aMuted;
-- (void)setLocalDisplayView:(UIView*)aDisplayView;
-- (void)setRemoteDisplayView:(UIView*)aDisplayView;
+- (void)setLocalDisplayView:(UIView*)aDisplayView enableVideo:(BOOL)aEnableVideo;
+- (void)setRemoteDisplayView:(UIView*)aDisplayView enableVideo:(BOOL)aEnableVideo;
+- (void)switchToVoiceAction;
 @end
 
 NS_ASSUME_NONNULL_END
